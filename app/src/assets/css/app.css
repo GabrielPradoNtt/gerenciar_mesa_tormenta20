@@ -1,0 +1,79 @@
+/* Nav bar */
+.app-nav-bar{
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;    
+    width: min-content;
+    z-index: 1000;
+    overflow: auto;
+    background-color: #AB322B;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#main-nav-bar > ul {
+    width: 100%;
+}
+
+#main-nav-bar > ul > button{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+#main-nav-bar > ul > button > label {
+    list-style: none;
+    text-align: center;
+    color: #F9F7C2 !important;
+}
+
+#main-nav-bar > ul > button > span {
+    list-style: none;
+    text-align: center;
+    color: #F9F7C2 !important;
+}
+
+#main-nav-bar > ul > button:focus,
+#main-nav-bar > ul > button:active {
+    width: 100%;
+    background-color: transparent;
+    border: none !important;
+    outline: none !important;
+}
+#main-nav-bar > ul > button:focus > span,
+#main-nav-bar > ul > button:active > span {
+    border: none;
+    color: #2B2A19 !important;
+    background-color: #F9F7C2 !important;
+    padding: 4px 14px;
+    border-radius: 8px;
+}
+
+
+.search-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #31111D;
+    background-color: #FFE1DD;
+}
+.search-button >  button:active > span  {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #31111D !important;
+    background-color: #FFE1DD !important;
+}

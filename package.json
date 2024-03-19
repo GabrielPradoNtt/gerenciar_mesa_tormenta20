@@ -1,0 +1,38 @@
+{
+  "name": "gerenciar_mesa_tormenta20",
+  "version": "1.0.0",
+  "description": "Pagina em TS para estudos sobre a linguagem com o foco em criar uma aplicação para gerenciar fichas baseadas no RPG Brasileiro de Tormenta 20, contendo a visão para as Fichas de jogadores, personagens e ameaças, permitindo que o usuario possa fazer o gerenciamento completo da mesa.",
+  "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "copyfiles": "copyfiles -u 1 app/**/*.html app/**/*.css app/**/*.scss app/src/assets/**/*.* dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server --baseDir=dist",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "compile": "npm run copyfiles && tsc",
+    "watch": "npm run copyfiles && tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielPradoNtt/gerenciar_mesa_tormenta20.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Prado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielPradoNtt/gerenciar_mesa_tormenta20/issues"
+  },
+  "homepage": "https://github.com/GabrielPradoNtt/gerenciar_mesa_tormenta20#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "concurrently": "^6.0.0",
+    "copyfiles": "^2.4.1",
+    "lite-server": "^2.6.1",
+    "node": "^16.14.0",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {}
+}
