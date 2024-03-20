@@ -1,5 +1,9 @@
+import { DOMInjector } from "../decorator/DOMInjector.js";
+
 export class NavBarView {
-    private elemento: HTMLElement | null = null;
+    
+    @DOMInjector('app-nav-bar')
+    private elemento: HTMLElement;
     private listaLinks: LinkNavBar[] = [
         {
             id: 'search',
@@ -47,7 +51,6 @@ export class NavBarView {
     ];
 
     constructor(){
-        this.elemento = document.querySelector('app-nav-bar');
         this.update();
     }
 
@@ -56,8 +59,8 @@ export class NavBarView {
         return `
             <nav id="main-nav-bar" class="d-flex flex-column justify-content-center align-items-center pt-3">
                 ${ this.listaLinks.map(link => `
-                    <ul class="p-0 m-0 mb-1 ${link.id == "search" ? 'search-button' : ''}">
-                        <button onclick="window.location.href='${link.path}'">
+                    <ul class="p-0 m-0 mb-1 ${link.id == "search" ? 'search-button' : ''} ">
+                        <button onclick="window.location.href='${link.path}'" ${this.validarPath(link)}>
                             <span>
                                 <i class="${link.icon}" id="${link.id}"></i>
                             </span>
@@ -68,6 +71,12 @@ export class NavBarView {
                 ).join('') }
             </nav>
         `;
+    }
+    validarPath(link: LinkNavBar) {
+        if(window.location.href.includes(link.path)){
+            return 'active';
+        }
+        return '';
     }
 
     update(): void {

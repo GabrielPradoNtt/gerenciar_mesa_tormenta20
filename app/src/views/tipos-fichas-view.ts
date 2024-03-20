@@ -1,8 +1,9 @@
-export class TiposFichasView {
-    private elemento: HTMLElement | null = null;
+import { DOMInjector } from "../decorator/DOMInjector.js";
 
-    constructor(seletor:string){
-        this.elemento = document.querySelector(seletor);
+export class TiposFichasView {
+    @DOMInjector('app-principal')
+    private elemento: HTMLElement;
+    constructor(){
         this.update();
     }
 
