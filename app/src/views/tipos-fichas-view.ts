@@ -1,8 +1,11 @@
 import { DOMInjector } from "../decorator/DOMInjector.js";
+import { Jogadores } from "../models/jogadores.js";
 
 export class TiposFichasView {
     @DOMInjector('app-principal')
     private elemento: HTMLElement;
+
+    private listaJogadores: Array<Jogadores> = [];
     constructor(){
         this.update();
     }
